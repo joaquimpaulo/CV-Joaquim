@@ -36,7 +36,7 @@ body {
    SIDEBAR
    ============================================= */
 .sidebar {
-  background: #2e3a4e;   /* exact dark navy from PDF */
+  background: #2e3a4e;
   color: #ccd6e0;
   padding: 0 0 40px 0;
   display: flex;
@@ -90,35 +90,6 @@ body {
   display: block;
 }
 
-/* ── Upload button ── */
-.avatar-upload-btn {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 20px;
-  color: #b8c8d8;
-  font-family: 'Raleway', sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  padding: 5px 12px;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-  white-space: nowrap;
-}
-
-.avatar-upload-btn:hover {
-  background: rgba(255,255,255,0.18);
-  color: #ffffff;
-}
-
-.avatar-upload-btn svg {
-  width: 12px;
-  height: 12px;
-  flex-shrink: 0;
-}
 
 /* ── Sidebar Sections ── */
 .sb-section {
@@ -538,20 +509,134 @@ body {
   html, body {
     background: #fff;
   }
+
+  /* Força numa única página A4 */
   .cv-page {
     box-shadow: none;
-    max-width: 100%;
     margin: 0;
+    width: 210mm;
+    height: 297mm;
+    max-width: 210mm;
+    overflow: hidden;
+    page-break-after: avoid;
+    break-after: avoid;
   }
+
+  /* Esconde botões */
   .print-btn,
   .no-print {
     display: none !important;
   }
+
+  /* Reduz avatar */
+  .avatar-wrap {
+    padding: 18px 0 10px;
+    gap: 6px;
+  }
+  .avatar {
+    width: 88px;
+    height: 88px;
+  }
+
+  /* Reduz secções da sidebar */
+  .sb-section {
+    padding: 9px 20px 3px;
+  }
+  .sb-title {
+    font-size: 9.5px;
+    margin-bottom: 7px;
+    padding-bottom: 4px;
+  }
+  .sb-contact-list {
+    gap: 7px;
+  }
+  .sb-contact-list li,
+  .sb-skills-list li,
+  .sb-lang-list li,
+  .ref-role,
+  .ref-line {
+    font-size: 10px;
+  }
+  .sb-skills-list {
+    gap: 3px;
+  }
+  .sb-lang-list {
+    gap: 3px;
+  }
+  .ref-name {
+    font-size: 10.5px;
+  }
+
+  /* Reduz header principal */
+  .main-header {
+    padding: 22px 34px 16px;
+  }
+  .name {
+    font-size: 26px;
+    margin-bottom: 4px;
+  }
+  .job-title {
+    font-size: 9px;
+  }
+
+  /* Reduz corpo principal */
+  .main-body {
+    padding: 16px 34px 16px;
+    gap: 4px;
+  }
+  .cv-section {
+    margin-bottom: 7px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .section-head {
+    margin-bottom: 7px;
+    gap: 9px;
+  }
+  .section-icon-circle {
+    width: 24px;
+    height: 24px;
+  }
+  .section-icon-circle svg {
+    width: 12px;
+    height: 12px;
+  }
+  .section-title {
+    font-size: 9.5px;
+    padding-bottom: 3px;
+  }
+  .profile-text {
+    font-size: 10.5px;
+    line-height: 1.6;
+  }
+  .timeline-item {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .tl-content {
+    padding-bottom: 8px;
+  }
+  .tl-company {
+    font-size: 11px;
+  }
+  .tl-date {
+    font-size: 10px;
+  }
+  .tl-subtitle {
+    font-size: 10px;
+    margin-bottom: 3px;
+  }
+  .tl-bullets {
+    gap: 2px;
+    margin-top: 3px;
+  }
+  .tl-bullets li {
+    font-size: 10.5px;
+    line-height: 1.45;
+  }
+
   @page {
     size: A4;
     margin: 0;
-  }
-  .cv-page {
-    min-height: 297mm;
   }
 }
