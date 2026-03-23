@@ -1,0 +1,557 @@
+/* =============================================
+   RESET & BASE
+   ============================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100%;
+  background: #e8ecf0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =============================================
+   CV PAGE WRAPPER — two-column grid
+   ============================================= */
+.cv-page {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+  max-width: 860px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 0 40px rgba(0,0,0,0.18);
+}
+
+/* =============================================
+   SIDEBAR
+   ============================================= */
+.sidebar {
+  background: #2e3a4e;   /* exact dark navy from PDF */
+  color: #ccd6e0;
+  padding: 0 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Avatar ── */
+.avatar-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px 0 20px;
+  gap: 10px;
+}
+
+.avatar {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  background: #3d5068;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.avatar:hover {
+  border-color: #9bbfd6;
+}
+
+.avatar-initials {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 2px;
+  pointer-events: none;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+/* ── Upload button ── */
+.avatar-upload-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+  color: #b8c8d8;
+  font-family: 'Raleway', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.avatar-upload-btn:hover {
+  background: rgba(255,255,255,0.18);
+  color: #ffffff;
+}
+
+.avatar-upload-btn svg {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+/* ── Sidebar Sections ── */
+.sb-section {
+  padding: 18px 24px 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.sb-section:last-child {
+  border-bottom: none;
+}
+
+/* ── Section Title ── */
+.sb-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: #ffffff;
+  margin-bottom: 14px;
+  padding-bottom: 6px;
+  border-bottom: 1.5px solid rgba(255,255,255,0.15);
+}
+
+/* ── Contact list ── */
+.sb-contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding-bottom: 6px;
+}
+
+.sb-contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 11.5px;
+  line-height: 1.55;
+  color: #b8c8d8;
+}
+
+.sb-icon {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  margin-top: 2px;
+  color: #8fb3cc;
+}
+
+.sb-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ── Skills list ── */
+.sb-skills-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding-bottom: 8px;
+}
+
+.sb-skills-list li {
+  font-size: 11.5px;
+  color: #b8c8d8;
+  line-height: 1.45;
+  padding-left: 13px;
+  position: relative;
+}
+
+.sb-skills-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #7aa8c4;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+/* ── Languages list ── */
+.sb-lang-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding-bottom: 8px;
+}
+
+.sb-lang-list li {
+  font-size: 11.5px;
+  color: #b8c8d8;
+  line-height: 1.45;
+  padding-left: 13px;
+  position: relative;
+}
+
+.sb-lang-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #7aa8c4;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+/* ── Reference ── */
+.sb-ref {
+  padding-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ref-name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #dde8f0;
+}
+
+.ref-role {
+  font-size: 11px;
+  color: #9ab8cc;
+  margin-bottom: 2px;
+}
+
+.ref-line {
+  font-size: 11px;
+  color: #b8c8d8;
+  line-height: 1.5;
+}
+
+.ref-label {
+  font-weight: 700;
+  color: #dde8f0;
+}
+
+/* =============================================
+   MAIN RIGHT COLUMN
+   ============================================= */
+.main {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+/* ── Top Header (dark band with name) ── */
+.main-header {
+  background: #2e3a4e;
+  padding: 38px 44px 30px;
+}
+
+.name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.job-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: #9bbfd6;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+/* ── Main body content ── */
+.main-body {
+  padding: 30px 44px 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* =============================================
+   CV SECTION
+   ============================================= */
+.cv-section {
+  margin-bottom: 14px;
+}
+
+/* ── Section head (icon circle + title bar) ── */
+.section-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.section-icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #2e3a4e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.section-icon-circle svg {
+  width: 15px;
+  height: 15px;
+  stroke: #ffffff;
+}
+
+.section-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color: #2e3a4e;
+  border-bottom: 2px solid #2e3a4e;
+  padding-bottom: 4px;
+  flex: 1;
+}
+
+/* =============================================
+   PROFILE TEXT (with left dot — no vertical line)
+   ============================================= */
+.timeline-line-spacer {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 0 14px;
+  padding-left: 2px;
+}
+
+.tl-dot-only {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #2e3a4e;
+  background: #fff;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.profile-text {
+  font-size: 12.5px;
+  line-height: 1.8;
+  color: #444;
+  text-align: justify;
+}
+
+/* =============================================
+   TIMELINE ITEMS
+   ============================================= */
+.timeline-item {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 0 14px;
+  padding-left: 2px;
+  margin-bottom: 0;
+}
+
+/* dot + vertical line column */
+.tl-dot-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tl-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #2e3a4e;
+  background: #fff;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.tl-vline {
+  flex: 1;
+  width: 1.5px;
+  background: #c8d4de;
+  min-height: 16px;
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+
+/* content column */
+.tl-content {
+  padding-bottom: 18px;
+}
+
+.tl-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2px;
+  margin-bottom: 2px;
+}
+
+.tl-company {
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  color: #2e3a4e;
+  line-height: 1.3;
+}
+
+.tl-date {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #7a8fa0;
+  white-space: nowrap;
+}
+
+.tl-subtitle {
+  font-size: 11.5px;
+  color: #6e8090;
+  margin-bottom: 7px;
+  margin-top: 1px;
+  font-style: italic;
+}
+
+/* bullet points inside timeline */
+.tl-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 4px;
+}
+
+.tl-bullets li {
+  font-size: 12px;
+  line-height: 1.65;
+  color: #444;
+  padding-left: 14px;
+  position: relative;
+  text-align: justify;
+}
+
+.tl-bullets li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #2e3a4e;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* =============================================
+   PRINT BUTTON (floating, hidden on print)
+   ============================================= */
+.print-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #2e3a4e;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  padding: 12px 22px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 20px rgba(46,58,78,0.4);
+  transition: background 0.2s, transform 0.2s;
+  z-index: 999;
+}
+.print-btn:hover {
+  background: #3d5068;
+  transform: translateY(-2px);
+}
+.print-btn svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 700px) {
+  .cv-page {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+  .main-header {
+    padding: 28px 24px 22px;
+  }
+  .name {
+    font-size: 24px;
+  }
+  .main-body {
+    padding: 22px 24px 32px;
+  }
+  .print-btn {
+    bottom: 16px;
+    right: 16px;
+    padding: 10px 18px;
+    font-size: 12px;
+  }
+}
+
+/* =============================================
+   PRINT STYLES
+   ============================================= */
+@media print {
+  html, body {
+    background: #fff;
+  }
+  .cv-page {
+    box-shadow: none;
+    max-width: 100%;
+    margin: 0;
+  }
+  .print-btn,
+  .no-print {
+    display: none !important;
+  }
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  .cv-page {
+    min-height: 297mm;
+  }
+}

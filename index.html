@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="Pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV-Joaquim_Paulo_Joaquim</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- jsPDF + html2canvas -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+
+<body>
+
+    <div class="cv-page">
+
+    <aside class="sidebar">
+
+      <!-- Avatar -->
+      <div class="avatar-wrap">
+        <div class="avatar" id="avatar-circle">
+          <img id="avatar-img" src="Img/Foto do perfil.jpeg" alt="Foto de perfil" style="display:block;" />
+          <span class="avatar-initials" id="avatar-initials" style="display:none;">JPJ</span>
+        </div>
+        <!-- Botão de upload (escondido na impressão) -->
+        <label class="avatar-upload-btn no-print" for="avatar-input" title="Clique para adicionar foto">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/>
+            <circle cx="12" cy="13" r="4"/>
+          </svg>
+          Adicionar foto
+        </label>
+        <input type="file" id="avatar-input" accept="image/*" style="display:none;" />
+      </div>
+
+<!-- CONTACTO -->
+      <div class="sb-section">
+        <h3 class="sb-title">CONTACTO</h3>
+        <ul class="sb-contact-list">
+          <li>
+            <span class="sb-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.06 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </span>
+            <span>+258 850 406 577<br>+258 834 797 657</span>
+          </li>
+          <li>
+            <span class="sb-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            <span>joaquimpaulo2306<br>@gmail.com</span>
+          </li>
+          <li>
+            <span class="sb-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <span>Nampula, Moçambique</span>
+          </li>
+        </ul>
+      </div>
+
+<!-- COMPETÊNCIAS TÉCNICAS -->
+
+      <div class="sb-section">
+        <h3 class="sb-title">COMPETÊNCIAS</h3>
+        <ul class="sb-skills-list">
+          <li>Eletrónica industrial</li>
+          <li>Sistemas de controlo</li>
+          <li>Microcontroladores</li>
+          <li>Instrumentação e medições</li>
+          <li>Automação industrial</li>
+          <li>Programação PLC (Ladder)</li>
+          <li>Sensores e atuadores</li>
+          <li>Comunicação RF</li>
+          <li>Noções de redes</li>
+          <li>HTML / JavaScript / React</li>
+          <li>Trabalho em equipa</li>
+          <li>Adaptabilidade técnica</li>
+        </ul>
+      </div>
+
+ 
+      <!-- IDIOMAS -->
+
+      <div class="sb-section">
+        <h3 class="sb-title">IDIOMAS</h3>
+        <ul class="sb-lang-list">
+          <li>Português (Nativo)</li>
+          <li>Inglês (Técnico / Intermédio)</li>
+          <li>Emakua (Básico)</li>
+        </ul>
+      </div>
+
+
+      <!-- REFERÊNCIA -->
+
+      <div class="sb-section">
+        <h3 class="sb-title">REFERÊNCIA</h3>
+        <div class="sb-ref">
+          <p class="ref-name">Universidade Rovuma</p>
+          <p class="ref-role">UniRovuma — Nampula</p>
+          <p class="ref-name">Electricidade de Moçambique</p>
+          <p class="ref-role">EDM-Nampula — DTNO</p>
+          <p class="ref-line"><span class="ref-label">Curso:</span> Eng. Eletrónica</p>
+          <p class="ref-line"><span class="ref-label">Ano:</span> 2022 – 2026 (Finalista)</p>
+        </div>
+      </div>
+       </aside>
+
+
+    <!-- ═══════════════════════════════════════
+         MAIN (right column — white background)
+    ═══════════════════════════════════════ -->
+    <main class="main">
+
+      <!-- TOPO DO HEADER -->
+
+      <header class="main-header">
+        <h1 class="name">JOAQUIM PAULO JOAQUIM</h1>
+        <p class="job-title">ESTUDANTE DE ENGENHARIA ELETRÓNICA COM HABILITAÇÃO EM TELECOMUNICAÇÕES</p>
+      </header>
+
+      <!-- MAIN CONTENT BODY -->
+
+      <div class="main-body">
+
+        <!-- PERFIL PROFISSIONAL -->
+
+        <section class="cv-section">
+          <div class="section-head">
+            <div class="section-icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+
+             <h2 class="section-title">PERFIL PROFISSIONAL</h2>
+          </div>
+          <div class="timeline-line-spacer">
+            <div class="tl-dot-only"></div>
+            <p class="profile-text">
+              Estudante finalista de Engenharia Eletrónica com habilitação em Telecomunicações, com conhecimentos em eletrónica industrial, instrumentação eletrónica, automação e sistemas de medição. Possui interesse em estágio técnico nas áreas industrial, energética, telecomunicações e manutenção, buscando aplicar conhecimentos académicos e desenvolver competências profissionais em ambientes técnicos exigentes.
+            </p>
+          </div>
+        </section>
+
+ <!-- PROJETOS ACADÉMICOS E EXPERIÊNCIA PRÁTICA -->
+
+        <section class="cv-section">
+          <div class="section-head">
+            <div class="section-icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+            </div>
+            <h2 class="section-title">PROJETOS ACADÉMICOS E EXPERIÊNCIA PRÁTICA</h2>
+          </div>
+
+            <!-- Projetos Académicos -->
+
+            <div class="timeline-item">
+              <div class="tl-dot-col">
+                <div class="tl-dot"></div>
+                <div class="tl-vline"></div>
+                </div>
+                 <div class="tl-content">
+              <div class="tl-header">
+                <span class="tl-company">Projetos Académicos</span>
+              </div>
+              <ul class="tl-bullets">
+                <li>Sistema de Monitoramento e Alerta Térmico</li>
+                <li>Sistema de Controlo de Velocidade de Veículos</li>
+                <li>Sistema de Segurança Residencial Eletrónico</li>
+                <li>Programação de PLC em Ladder para Automação Industrial</li>
+                <li>Noções de desenvolvimento web (HTML, JavaScript, React)</li>
+                <li>Sistema Inteligente de Controlo Ambiental para Estufa Automatizada</li>
+              </ul>
+            </div>
+          </div>
+
+           <!-- Experiência Prática -->
+
+          <div class="timeline-item">
+            <div class="tl-dot-col">
+              <div class="tl-dot"></div>
+              <div class="tl-vline"></div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-header">
+                <span class="tl-company">Experiência Prática</span>
+              </div>
+              <ul class="tl-bullets">
+                <li>Instalações elétricas residenciais</li>
+                <li>Manutenção básica de equipamentos elétricos e eletrónicos</li>
+                <li>Montagem e teste de circuitos eletrónicos</li>
+                <li>Utilização de instrumentos de medição elétrica</li>
+                <li>Leitura de esquemas técnicos</li>
+                <li>Cumprimento de normas de segurança</li>
+              </ul>
+            </div>
+          </div>
+          </section>
+
+        <!-- FORMAÇÃO ACADÉMICA -->
+
+        <section class="cv-section">
+          <div class="section-head">
+            <div class="section-icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <h2 class="section-title">FORMAÇÃO ACADÉMICA</h2>
+          </div>
+
+          <div class="timeline-item">
+            <div class="tl-dot-col">
+              <div class="tl-dot"></div>
+              <div class="tl-vline"></div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-header">
+                <span class="tl-company">Licenciatura em Engenharia Eletrónica</span>
+                <span class="tl-date">2022 – 2026</span>
+              </div>
+              <p class="tl-subtitle">Habilitação em Telecomunicações | Universidade Rovuma (UniRovuma)</p>
+              <ul class="tl-bullets">
+                <li>Previsão de conclusão: 2026 (Estudante Finalista)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="tl-dot-col">
+              <div class="tl-dot"></div>
+              <div class="tl-vline"></div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-header">
+                <span class="tl-company">Ensino Secundário Geral</span>
+                <span class="tl-date">2017 – 2021</span>
+              </div>
+              <p class="tl-subtitle">Escola Secundária de Nampula</p>
+            </div>
+          </div>
+
+          <!-- Formação Complementar -->
+
+          <div class="timeline-item">
+            <div class="tl-dot-col">
+              <div class="tl-dot"></div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-header">
+                <span class="tl-company">Formação Complementar / Eventos</span>
+                <span class="tl-date">Dezembro 2025</span>
+              </div>
+              <p class="tl-subtitle">Participação na 2ª Edição do Webinar</p>
+              <ul class="tl-bullets">
+                <li>Inovação Digital na Formação em Segurança e Saúde Ocupacionais no Setor Extrativo — 22 de dezembro de 2025</li>
+                <li>Curso de Introdução à Programação em Python — 2024</li>
+                <li>Workshop de Eletrónica Básica para Estudantes — 2023</li>
+                <li>Curso de Read2work do Absa — 2025</li>
+              </ul>
+            </div>
+          </div>
+
+        </section>
+
+        </div><!-- /main-body -->
+    </main>
+
+  </div><!-- /cv-page -->
+
+    <!--script-->
+<script src="js/script.js"></script>
+</body>
+</html>
