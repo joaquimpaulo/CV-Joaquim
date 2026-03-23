@@ -90,6 +90,35 @@ body {
   display: block;
 }
 
+/* ── Upload button ── */
+.avatar-upload-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+  color: #b8c8d8;
+  font-family: 'Raleway', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.avatar-upload-btn:hover {
+  background: rgba(255,255,255,0.18);
+  color: #ffffff;
+}
+
+.avatar-upload-btn svg {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
 
 /* ── Sidebar Sections ── */
 .sb-section {
@@ -506,6 +535,12 @@ body {
    PRINT STYLES
    ============================================= */
 @media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
   html, body {
     background: #fff;
   }
