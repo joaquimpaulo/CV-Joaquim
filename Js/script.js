@@ -69,12 +69,16 @@ document.addEventListener('DOMContentLoaded', function () {
   // ── 5. DOCUMENTOS ────────────────────────────
 
   const docs = [
-    { name: 'BI de Gui de Paulo',        file: 'BI de Gui de Paulo.pdf',                            type: 'pdf'   },
+    { name: 'Automação Residencial',      file: 'Automação residencial.png',                         type: 'image' },
+    { name: 'BI de Gui de Paulo',         file: 'BI de Gui de Paulo.pdf',                            type: 'pdf'   },
     { name: 'Certificado Webinar',        file: 'Certificado 2 Webinar - Joaquim Paulo Joaquim.pdf', type: 'pdf'   },
     { name: 'Certificado Read2work',      file: 'certificado do Read2work.pdf',                      type: 'pdf'   },
+    { name: 'certificado da 12ª classe',  file: 'certificado da 12ª classe.pdf',                     type: 'pdf' },
+    { name: 'certificado da 10ª classe',  file: 'certificado da 10ª classe',                         type: 'pdf' },
     { name: 'CV Alternativo',             file: 'CV_alternativo.pdf',                                type: 'pdf'   },
+    { name: 'Nuit-Gui de Paulo',          file: 'Nuit-Gui de Paulo.pdf',                             type: 'pdf' },
+    { name: 'Recenseamento Militar',      file: 'Recenseamento Militar.pdf',                         type: 'pdf' },
     { name: 'Sistema Rodoviário',         file: 'Sistema rodoviario.png',                            type: 'image' },
-    { name: 'Automação Residencial',      file: 'Automação residencial.png',                         type: 'image' },
     { name: 'Sistema de Inundação',       file: 'Sistema de inundação.png',                          type: 'image' },
   ];
 
@@ -88,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <line x1="16" y1="13" x2="8" y2="13"/>
       <line x1="16" y1="17" x2="8" y2="17"/>
     </svg>
-    Ver Documentos
+    Outros Documentos
   `;
   docsBtn.addEventListener('click', openDocsModal);
   document.body.appendChild(docsBtn);
