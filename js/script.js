@@ -69,17 +69,17 @@ document.addEventListener('DOMContentLoaded', function () {
   // ── 5. DOCUMENTOS ────────────────────────────
 
   const docs = [
-    { name: 'Automação Residencial',      file: 'Automação residencial.png',                         type: 'image' },
-    { name: 'BI de Gui de Paulo',         file: 'BI de Gui de Paulo.pdf',                            type: 'pdf'   },
-    { name: 'Certificado Webinar',        file: 'Certificado 2 Webinar - Joaquim Paulo Joaquim.pdf', type: 'pdf'   },
-    { name: 'Certificado Read2work',      file: 'certificado do Read2work.pdf',                      type: 'pdf'   },
-    { name: 'certificado da 12ª classe',  file: 'certificado da 12ª classe.pdf',                     type: 'pdf' },
-    { name: 'certificado da 10ª classe',  file: 'certificado da 10ª classe',                         type: 'pdf' },
-    { name: 'CV Alternativo',             file: 'CV_alternativo.pdf',                                type: 'pdf'   },
-    { name: 'Nuit-Gui de Paulo',          file: 'Nuit-Gui de Paulo.pdf',                             type: 'pdf' },
-    { name: 'Recenseamento Militar',      file: 'Recenseamento Militar.pdf',                         type: 'pdf' },
-    { name: 'Sistema Rodoviário',         file: 'Sistema rodoviario.png',                            type: 'image' },
-    { name: 'Sistema de Inundação',       file: 'Sistema de inundação.png',                          type: 'image' },
+    { name: 'Automação Residencial',      file: 'Automação-residencial.png',                         type: 'image' },
+    { name: 'BI de Gui de Paulo',         file: 'BI-de-Gui-de-Paulo.pdf',                            type: 'pdf'   },
+    { name: 'Certificado Webinar',        file: 'Certificado-2-Webinar-Joaquim-Paulo-Joaquim.pdf',   type: 'pdf'   },
+    { name: 'Certificado Read2work',      file: 'certificado-do-Read2work.pdf',                      type: 'pdf'   },
+    { name: 'certificado da 12ª classe',  file: 'certificado-da-12ª-classe.pdf',                     type: 'pdf' },
+    { name: 'certificado da 10ª classe',  file: 'certificado-da-10ª-classe.pdf',                     type: 'pdf' },
+    { name: 'CV Alternativo',             file: 'CV-alternativo.pdf',                                type: 'pdf'   },
+    { name: 'Nuit-Gui de Paulo',          file: 'Nuit-Gui-de-Paulo.pdf',                             type: 'pdf' },
+    { name: 'Recenseamento Militar',      file: 'Recenseamento-Militar.pdf',                         type: 'pdf' },
+    { name: 'Sistema Rodoviário',         file: 'Sistema-rodoviario.png',                            type: 'image' },
+    { name: 'Sistema de Inundação',       file: 'Sistema-de-inundação.png',                          type: 'image' },
   ];
 
   // ── Botão "Ver Documentos" ──

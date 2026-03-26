@@ -800,17 +800,18 @@ body {
   }
 
   /* Força numa única página A4 */
-  .cv-page {
-    box-shadow: none;
-    margin: 0;
-    width: 210mm;
-    height: 297mm;
-    max-width: 210mm;
-    overflow: hidden;
-    page-break-after: avoid;
-    break-after: avoid;
-  }
-
+ .cv-page {
+  box-shadow: none;
+  margin: 0;
+  width: 210mm;
+  height: 297mm;
+  max-width: 210mm;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  page-break-after: avoid;
+  break-after: avoid;
+}
   /* Esconde botões */
   .print-btn,
   .no-print {
